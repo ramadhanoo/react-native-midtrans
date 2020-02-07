@@ -4,17 +4,12 @@
 
 `$ npm install @adrianha/react-native-midtrans --save`
 
-### Mostly automatic installation
-
-`$ react-native link @adrianha/react-native-midtrans`
-
 ### Manual installation
 
 #### iOS using Cocoapods
 
-1. Add `pod 'ReactNativeMidtrans', :path => '../node_modules/@adrianha/react-native-midtrans'` on your `Podfile`
+1. Navigate to ios/
 2. Run `pod install`
-3. Run your project (`Cmd+R`)
 
 #### iOS
 
@@ -25,25 +20,27 @@
 
 #### Android
 
-1. Open up `android/build.gradle`
+1. Open up `android/app/build.gradle`
 
-- Add `maven { url "http://dl.bintray.com/pt-midtrans/maven" }` on `allproject.repositories` scope
-- Add `maven { url "https://jitpack.io" }` on `allproject.repositories` scope
+Add this.
 
-2. Open up `android/app/src/main/java/[...]/MainApplication.java`
+`repositories {
+    jcenter()
+    // Add the midtrans repository into the list of repositories
+    maven { url "http://dl.bintray.com/pt-midtrans/maven" }
+    maven { url "https://jitpack.io" }
+}`
 
-- Add `import com.adrianha.midtrans.ReactNativeMidtransPackage;` to the imports at the top of the file
-- Add `new ReactNativeMidtransPackage()` to the list returned by the `getPackages()` method
+2. In `android/app/build.gradle`
 
-3. Append the following lines to `android/settings.gradle`:
-   ```
-   include ':@adrianha/react-native-midtrans'
-   project(':@adrianha/react-native-midtrans').projectDir = new File(rootProject.projectDir, 	'../node_modules/@adrianha/react-native-midtrans/android')
-   ```
-4. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-   ```
-   implementation project(':@adrianha/react-native-midtrans')
-   ```
+Add this line 
+
+`// For using the Midtrans Sandbox
+implementation 'com.midtrans:uikit:1.23.0-SANDBOX' // change the number to the latest version
+// For using the Midtrans Production
+implementation 'com.midtrans:uikit:1.23.0' // change the number to the latest version`
+
+For see the version. https://github.com/veritrans/veritrans-android/releases
 
 ## Usage
 
