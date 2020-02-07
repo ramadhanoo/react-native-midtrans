@@ -24,12 +24,14 @@
 
 Add this.
 
-`repositories {
+```
+repositories {
     jcenter()
     // Add the midtrans repository into the list of repositories
     maven { url "http://dl.bintray.com/pt-midtrans/maven" }
     maven { url "https://jitpack.io" }
-}`
+}
+```
 
 2. In `android/app/build.gradle`
 
