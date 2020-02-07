@@ -4,7 +4,7 @@
 
 `$ npm install @adrianha/react-native-midtrans --save`
 
-### Manual installation
+### installation RN(60 or latest)
 
 #### iOS using Cocoapods
 
