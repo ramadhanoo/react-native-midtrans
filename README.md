@@ -37,10 +37,12 @@ repositories {
 
 Add this line 
 
-`// For using the Midtrans Sandbox
+```
+// For using the Midtrans Sandbox
 implementation 'com.midtrans:uikit:1.23.0-SANDBOX' // change the number to the latest version
 // For using the Midtrans Production
-implementation 'com.midtrans:uikit:1.23.0' // change the number to the latest version`
+implementation 'com.midtrans:uikit:1.23.0' // change the number to the latest version
+```
 
 For see the version. https://github.com/veritrans/veritrans-android/releases
 
