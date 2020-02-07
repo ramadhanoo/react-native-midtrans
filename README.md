@@ -1,4 +1,4 @@
-# @adrianha/react-native-midtrans
+# react-native-midtrans with snap token
 
 ## Getting started
 
