@@ -35,7 +35,7 @@ repositories {
 
 2. In `android/app/build.gradle`
 
-Add this line 
+Add this line on dependencies
 
 ```
 // For using the Midtrans Sandbox
