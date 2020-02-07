@@ -54,8 +54,8 @@ For see the version. https://github.com/veritrans/veritrans-android/releases
 import Midtrans from '@adrianha/react-native-midtrans';
 
 const midtrans = new Midtrans({
-  clientKey: 'CLIENT_KEY',
-  baseUrl: 'BASE_URL',
+  clientKey: 'YOUR_CLIENT_KEY',
+  baseUrl: 'MERCHANT_BASE_URL',
 
   /** iOS only: Midtrans.ENVIRONMENT_SANDBOX | Midtrans.ENVIRONMENT_PRODUCTION */
   environment: Midtrans.ENVIRONMENT_SANDBOX,
@@ -71,7 +71,7 @@ const midtrans = new Midtrans({
 
 ```javascript
 try {
-  const result = await midtrans.startPaymentWithSnapToken('SNAP_TOKEN');
+  const result = await midtrans.startPaymentWithSnapToken('PAYMENT_SNAP_TOKEN');
   console.log({ result });
 } catch (e) {
   console.log(e);
